@@ -14,8 +14,9 @@ BuildRequires:  gcc
 
 Requires:       binutils-gold
 
-%global __provides_exclude_from ^(%{_libexecdir}/simplesharedlibrary/.*\\.so.*)$
-%global __requires_exclude_from ^(%{_libexecdir}/simplesharedlibrary/.*\\.so.*)$
+%global _privatelibs libadd[.]so.*
+%global __provides_exclude ^(%{_privatelibs})$
+%global __requires_exclude ^(%{_privatelibs})$
 
 %description
 Just a nothing package to test the exclusion flags above
