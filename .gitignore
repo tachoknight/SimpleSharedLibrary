@@ -2,3 +2,5 @@ main.o
 main
 libadd.so
 add.o
+build-output.txt
+.*
