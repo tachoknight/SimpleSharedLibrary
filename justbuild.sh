@@ -20,6 +20,7 @@ mkdir -p $HOME/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 cp $PWD/*.patch $HOME/rpmbuild/SOURCES
 cp $PWD/*.conf $HOME/rpmbuild/SOURCES
 cp $PWD/$SPECFILE $HOME/rpmbuild/SPECS
+cp $PWD/*.inc $HOME/rpmbuild/SPECS
 
 pushd $HOME/rpmbuild/SPECS
 spectool -g -R ./$SPECFILE
