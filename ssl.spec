@@ -8,13 +8,14 @@ Summary:        Nothing package
 License:        Apache-2.0        
 URL:            https://github.com/tachoknight/SimpleSharedLibrary
 Source0:        https://github.com/tachoknight/SimpleSharedLibrary/archive/refs/tags/v1.0.tar.gz        
+Source1:        excludes.inc
 
 BuildRequires:  make
 BuildRequires:  gcc
 
 Requires:       binutils-gold
 
-%include excludes.inc
+%include %{SOURCE1}
 
 %description
 Just a nothing package to test the exclusion flags above
